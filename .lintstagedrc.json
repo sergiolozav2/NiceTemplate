@@ -1,4 +1,4 @@
 {
-  "src/**/*.{ts,tsx}": ["pnpm run lint", "pnpm run test"],
-  "src/**/*.css": ["pnpm run lint"]
+  "src/**/*.{ts,tsx}": ["pnpm run test"],
+  "src/**/*.{js,ts,tsx,css,md}": ["pnpm run lint"]
 }
