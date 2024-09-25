@@ -13,8 +13,8 @@
     "docs:gen": "pnpm exec typedoc --out docs --plugin typedoc-theme-hierarchy --theme hierarchy --entryPointStrategy expand ./src",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "prepare": "husky",
-    "husky:lint-staged": "lint-staged",
+    "prepare": "husky && husky install",
+    "husky:lint-staged": "CI=true lint-staged",
     "husky:commitlint": "npx --no-install commitlint --edit"
   },
   "dependencies": {
