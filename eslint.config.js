@@ -81,12 +81,6 @@ export default tseslint.config(
       "react/react-in-jsx-scope": "off",
       "react/jsx-one-expression-per-line": "off",
       "react/prop-types": "off",
-      "check-file/folder-match-with-fex": [
-        "error",
-        {
-          "*.spec.{js,jsx,ts,tsx}": "**/tests/",
-        },
-      ],
     },
   },
 )
