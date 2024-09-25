@@ -14,7 +14,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "prepare": "husky && husky install",
-    "husky:lint-staged": "CI=true lint-staged",
+    "husky:lint-staged": "lint-staged",
     "husky:commitlint": "npx --no-install commitlint --edit"
   },
   "dependencies": {
