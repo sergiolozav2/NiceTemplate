@@ -4,6 +4,7 @@ import reactHooks from "eslint-plugin-react-hooks"
 import react from "eslint-plugin-react"
 import reactRefresh from "eslint-plugin-react-refresh"
 import tseslint from "typescript-eslint"
+import checkFile from "eslint-plugin-check-file"
 
 export default tseslint.config(
   { ignores: ["dist"] },
@@ -26,8 +27,21 @@ export default tseslint.config(
       react: react,
       "react-hooks": reactHooks,
       "react-refresh": reactRefresh,
+      "check-file": checkFile,
     },
     rules: {
+      "check-file/filename-naming-convention": [
+        "error",
+        {
+          "**/*.{jsx,tsx}": "PASCAL_CASE",
+          "**/*.{js,ts}": "CAMEL_CASE",
+        },
+        { ignoreMiddleExtensions: true },
+      ],
+      "check-file/folder-naming-convention": [
+        "error",
+        { "src/**/": "KEBAB_CASE" },
+      ],
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
         "warn",
@@ -67,6 +81,12 @@ export default tseslint.config(
       "react/react-in-jsx-scope": "off",
       "react/jsx-one-expression-per-line": "off",
       "react/prop-types": "off",
+      "check-file/folder-match-with-fex": [
+        "error",
+        {
+          "*.spec.{js,jsx,ts,tsx}": "**/tests/",
+        },
+      ],
     },
   },
 )
