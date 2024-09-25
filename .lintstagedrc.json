@@ -1,0 +1,4 @@
+{
+  "src/**/*.{ts,tsx}": ["pnpm run lint", "pnpm run test"],
+  "src/**/*.css": ["pnpm run lint"]
+}
