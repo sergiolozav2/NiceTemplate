@@ -102,3 +102,19 @@ Define clear naming conventions for components, files, and variables:
 - **Components:** PascalCase (e.g., Feature1Page.tsx).
 - **Utility functions:** camelCase (e.g., getFeatureData).
 - **Folder names:** kebab-case (e.g., domain1, components).
+
+### 6. Git commit conventions
+
+All commit messages must specify its type:
+
+- **ci:** Changes to the CI configuration files
+- **chore:** Routine tasks not related to features or fixes, e.g. updating a dependancy
+- **docs:** Documentation only changes
+- **ticker:** Changes related to a ticket
+- **feat:** A new feature
+- **fix:** A bug fix
+- **perf:** A code change that improves performance
+- **test:** Adding tests or correcting existing tests
+- **refactor:** A code change that neither fixes a bug nor adds a feature
+- **revert:** Reverts a previous commit
+- **style:** Changes that do not affect the meaning of the code (formatting, missing colons, etc)
