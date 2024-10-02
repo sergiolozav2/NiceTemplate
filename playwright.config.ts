@@ -8,7 +8,7 @@ const CI = !!process.env["CI"]
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: "./src/tests",
+  testMatch: "**/*.spec.ts",
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: CI,
@@ -19,13 +19,12 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 
   webServer: {
-    command: "npm run dev",
-    port: 5173,
-    reuseExistingServer: true,
+    command: "npm run dev -- --port 5174",
+    port: 5174,
   },
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    baseURL: "http://localhost:5173",
+    baseURL: "http://localhost:5174",
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
   },
