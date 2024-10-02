@@ -1,1 +1,1 @@
-pnpm run husky:lint-staged
+npm run husky:lint-staged
